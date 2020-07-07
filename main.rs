@@ -35,13 +35,13 @@ fn DbgPrint(print_type: Type, msg: &str) {
 
     let color_debug = Style::new().fg(Color::Green).paint(msg);
     let color_note = Style::new().fg(Color::Blue).paint(msg);
-    let color_Warn = Style::new().fg(Color::Yellow).paint(msg);
-    let color_Error = Style::new().fg(Color::Red).paint(msg);
+    let color_warn = Style::new().fg(Color::Yellow).paint(msg);
+    let color_error = Style::new().fg(Color::Red).paint(msg);
 
     match print_type {
         Type::Debug => println!("[DEBUG: {}]\n{}", current_time.format("%Y-%m-%d][%H:%M:%S"), color_debug),
         Type::Note => println!("[NOTE: {}]\n{}", current_time.format("%Y-%m-%d][%H:%M:%S"), color_note),
-        Type::Warn => println!("[WARN: {}]\n{}", current_time.format("%Y-%m-%d][%H:%M:%S"), color_Warn),
-        Type::Error => println!("[ERROR: {}]\n{}", current_time.format("%Y-%m-%d][%H:%M:%S"), color_Error)
+        Type::Warn => println!("[WARN: {}]\n{}", current_time.format("%Y-%m-%d][%H:%M:%S"), color_warn),
+        Type::Error => println!("[ERROR: {}]\n{}", current_time.format("%Y-%m-%d][%H:%M:%S"), color_error)
     }
 }
